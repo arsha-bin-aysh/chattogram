@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840305462721",
+    "project_id": "chattogram-d3f13",
+    "storage_bucket": "chattogram-d3f13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840305462721:android:140d7076aa2c16a426f340",
+        "android_client_info": {
+          "package_name": "com.example.chattogram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDtrZa9TaE8pTiwgBUDwhIb1JDKAmNS2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

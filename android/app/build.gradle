@@ -1,0 +1,49 @@
+// Application-level build.gradle file
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services" // Google Services Plugin
+}
+
+android {
+    namespace = "com.example.chattogram"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.chattogram"
+        minSdkVersion 23
+        targetSdkVersion = flutter.targetSdkVersion
+        versionCode = flutterVersionCode
+        versionName = flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation platform("com.google.firebase:firebase-bom:33.1.2") // Firebase BOM
+    implementation "com.google.firebase:firebase-analytics" // Firebase Analytics
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version" // Kotlin Standard Library
+}
+
+// Repositories for the app-level build.gradle
+repositories {
+    google()
+    mavenCentral()
+    maven { url 'https://jitpack.io' } // Only if required by dependencies
+}
